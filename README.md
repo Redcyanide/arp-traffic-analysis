@@ -76,3 +76,20 @@ This practical exercise provided hands-on experience with ARP packet capture and
 It demonstrated how devices use ARP to discover MAC addresses and communicate across a local network.
 
 The exercise also introduced practical packet inspection skills that form part of network troubleshooting and cybersecurity analysis.
+## 8. Verification Using Ubuntu Network Commands
+
+The packet observations were independently verified using Ubuntu terminal commands.
+
+### Commands Used
+
+- `ip route` - Identified the default gateway and active network interface.
+- `ip neigh` - Displayed the IP-to-MAC address mapping in the neighbour table.
+- `ip link show wlo1` - Displayed the MAC address of the wireless interface.
+
+### Verification Results
+
+The gateway MAC address observed in Wireshark matched the gateway entry in the Ubuntu neighbour table.
+
+Similarly, the Ubuntu interface MAC address matched the sender MAC address observed in the ARP Reply.
+
+This confirmed the consistency of the packet capture and the system's network information.
